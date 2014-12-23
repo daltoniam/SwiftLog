@@ -1,3 +1,4 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////
 //
 //  Log.swift
 //
@@ -5,6 +6,7 @@
 //  Copyright (c) 2014 Vluxe. All rights reserved.
 //
 //  Simple logging class.
+//////////////////////////////////////////////////////////////////////////////////////////////////
 
 import Foundation
 
@@ -32,8 +34,25 @@ public class Log {
         return Static.instance
     }
     ///write content to the current log file.
-    public func write(text: String) {
-        
+    public func write(text: String) -> NSError? {
+        let path = "\(directory)/\(logName(0))"
+        var error: NSError?
+        text.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding, error: &error)
+        cleanup()
+        return error
+    }
+    ///do the checks and cleanup
+    func cleanup() {
+        let path = "\(directory)/\(logName(0))"
+        let size = fileSize(path)
+        let maxSize = maxFileSize*1024
+        if size > 0 && size >= maxSize && maxSize > 0 && maxFileCount > 0 {
+            rename(0)
+            //delete the oldest file
+            let deletePath = "\(directory)/\(logName(maxFileCount))"
+            let fileManager = NSFileManager.defaultManager()
+            fileManager.removeItemAtPath(deletePath, error: nil)
+        }
     }
     ///check the size of a file
     func fileSize(path: String) -> Int {
@@ -43,6 +62,22 @@ public class Log {
             return size
         }
         return 0
+    }
+    
+    ///Recursive method call to rename log files
+    func rename(index: Int) {
+        let fileManager = NSFileManager.defaultManager()
+        let path = "\(directory)/\(logName(index))"
+        let newPath = "\(directory)/\(logName(index+1))"
+        if fileManager.fileExistsAtPath(newPath) {
+            rename(index+1)
+        }
+        fileManager.moveItemAtPath(path, toPath: newPath, error: nil)
+    }
+    
+    ///gets the log name
+    func logName(num :Int) -> String {
+        return "\(name)-\(num).log"
     }
     
     ///get the default log directory
