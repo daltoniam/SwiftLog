@@ -14,7 +14,7 @@ import Foundation
 public class Log {
     
     ///The max size a log file can be in Kilobytes. Default is 1024 (1 MB)
-    public var maxFileSize = 1024
+    public var maxFileSize: UInt64 = 1024
     
     ///The max number of log file that will be stored. Once this point is reached, the oldest file is deleted.
     public var maxFileCount = 4
@@ -33,19 +33,36 @@ public class Log {
         }
         return Static.instance
     }
+    //the date formatter
+    var dateFormatter: NSDateFormatter {
+        let formatter = NSDateFormatter()
+        formatter.timeStyle = .MediumStyle
+        formatter.dateStyle = .MediumStyle
+        return formatter
+    }
+    
     ///write content to the current log file.
-    public func write(text: String) -> NSError? {
+    public func write(text: String) {
         let path = "\(directory)/\(logName(0))"
-        var error: NSError?
-        text.writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding, error: &error)
-        cleanup()
-        return error
+        let fileManager = NSFileManager.defaultManager()
+        if !fileManager.fileExistsAtPath(path) {
+            "".writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
+        }
+        if let fileHandle = NSFileHandle(forWritingAtPath: path) {
+            let dateStr = dateFormatter.stringFromDate(NSDate())
+            let writeText = "[\(dateStr)]: \(text)\n"
+            fileHandle.seekToEndOfFile()
+            fileHandle.writeData(writeText.dataUsingEncoding(NSUTF8StringEncoding)!)
+            fileHandle.closeFile()
+            print(writeText)
+            cleanup()
+        }
     }
     ///do the checks and cleanup
     func cleanup() {
         let path = "\(directory)/\(logName(0))"
         let size = fileSize(path)
-        let maxSize = maxFileSize*1024
+        let maxSize: UInt64 = maxFileSize*1024
         if size > 0 && size >= maxSize && maxSize > 0 && maxFileCount > 0 {
             rename(0)
             //delete the oldest file
@@ -54,12 +71,13 @@ public class Log {
             fileManager.removeItemAtPath(deletePath, error: nil)
         }
     }
+    
     ///check the size of a file
-    func fileSize(path: String) -> Int {
+    func fileSize(path: String) -> UInt64 {
         let fileManager = NSFileManager.defaultManager()
-        let attrs = fileManager.attributesOfFileSystemForPath(path, error: nil)
-        if let size = attrs?[NSFileSize] as? Int {
-            return size
+        let attrs: NSDictionary? = fileManager.attributesOfFileSystemForPath(path, error: nil)
+        if let dict = attrs {
+            return dict.fileSize()
         }
         return 0
     }
