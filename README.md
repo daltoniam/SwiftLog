@@ -14,7 +14,7 @@ Simple and easy logging in Swift.
 SwiftLog can be used right out of the box with no configuration, simply call the logging function.
 
 ```swift
-logf("write to the log!")
+logw("write to the log!")
 ```
 
 That will create a log file in the proper directory on both OS X and iOS. 
@@ -27,10 +27,10 @@ There are a few configurable options in SwiftLog.
 
 ```swift
 //This writes to the log
-logf("write to the log!")
+logw("write to the log!")
 
 //Set the name of the log files
-Log.logger.name = "test" //default is "logfile"
+Log.logger.name = "test" //default is "logwile"
 
 //Set the max size of each log file. Value is in KB
 Log.logger.maxFileSize = 2048 //default is 1024

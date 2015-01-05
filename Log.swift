@@ -123,6 +123,6 @@ public class Log {
 }
 
 ///a free function to make writing to the log much nicer
-func logf(text: String) {
+public func logw(text: String) {
     Log.logger.write(text)
 }

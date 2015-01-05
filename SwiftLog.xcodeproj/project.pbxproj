@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5CA8C98B1A5AF63F0089A692 /* SwiftLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CA8C98A1A5AF63F0089A692 /* SwiftLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5CA8C9911A5AF63F0089A692 /* SwiftLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA8C9851A5AF63F0089A692 /* SwiftLog.framework */; };
-		5CA8C9981A5AF63F0089A692 /* SwiftLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA8C9971A5AF63F0089A692 /* SwiftLogTests.swift */; };
 		5CA8C9E61A5AFDEF0089A692 /* SwiftLogOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA8C9DB1A5AFDEF0089A692 /* SwiftLogOSX.framework */; };
-		5CA8C9F41A5AFE890089A692 /* SwiftLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CA8C98A1A5AF63F0089A692 /* SwiftLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5CA8C9F61A5AFE9B0089A692 /* SwiftLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA8C9971A5AF63F0089A692 /* SwiftLogTests.swift */; };
-		5CA8C9F71A5B07BA0089A692 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA8C9A11A5AF6A70089A692 /* Log.swift */; };
-		5CA8C9F81A5B07E90089A692 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA8C9A11A5AF6A70089A692 /* Log.swift */; };
+		5CC95BDE1A5B0D8600E78EEC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC95BDD1A5B0D8600E78EEC /* Info.plist */; };
+		5CC95BE21A5B0DD400E78EEC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC95BE01A5B0DD400E78EEC /* Info.plist */; };
+		5CC95BE31A5B0DD400E78EEC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC95BE01A5B0DD400E78EEC /* Info.plist */; };
+		5CC95BE41A5B0DD400E78EEC /* SwiftLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC95BE11A5B0DD400E78EEC /* SwiftLogTests.swift */; };
+		5CC95BE51A5B0DD400E78EEC /* SwiftLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC95BE11A5B0DD400E78EEC /* SwiftLogTests.swift */; };
+		5CC95BE81A5B0E1400E78EEC /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC95BE61A5B0E1400E78EEC /* Log.swift */; };
+		5CC95BE91A5B0E1400E78EEC /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC95BE61A5B0E1400E78EEC /* Log.swift */; };
+		5CC95BEA1A5B0E1400E78EEC /* SwiftLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CC95BE71A5B0E1400E78EEC /* SwiftLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CC95BEB1A5B0E1400E78EEC /* SwiftLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CC95BE71A5B0E1400E78EEC /* SwiftLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,14 +39,14 @@
 
 /* Begin PBXFileReference section */
 		5CA8C9851A5AF63F0089A692 /* SwiftLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5CA8C9891A5AF63F0089A692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CA8C98A1A5AF63F0089A692 /* SwiftLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftLog.h; sourceTree = "<group>"; };
 		5CA8C9901A5AF63F0089A692 /* SwiftLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5CA8C9961A5AF63F0089A692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5CA8C9971A5AF63F0089A692 /* SwiftLogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLogTests.swift; sourceTree = "<group>"; };
-		5CA8C9A11A5AF6A70089A692 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = SOURCE_ROOT; };
 		5CA8C9DB1A5AFDEF0089A692 /* SwiftLogOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftLogOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA8C9E51A5AFDEF0089A692 /* SwiftLogOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLogOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC95BDD1A5B0D8600E78EEC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		5CC95BE01A5B0DD400E78EEC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CC95BE11A5B0DD400E78EEC /* SwiftLogTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftLogTests.swift; sourceTree = "<group>"; };
+		5CC95BE61A5B0E1400E78EEC /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = SOURCE_ROOT; };
+		5CC95BE71A5B0E1400E78EEC /* SwiftLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftLog.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				5CA8C9871A5AF63F0089A692 /* SwiftLog */,
-				5CA8C9941A5AF63F0089A692 /* SwiftLogTests */,
+				5CC95BDF1A5B0DD400E78EEC /* Tests */,
 				5CA8C9861A5AF63F0089A692 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,8 +106,8 @@
 		5CA8C9871A5AF63F0089A692 /* SwiftLog */ = {
 			isa = PBXGroup;
 			children = (
-				5CA8C98A1A5AF63F0089A692 /* SwiftLog.h */,
-				5CA8C9A11A5AF6A70089A692 /* Log.swift */,
+				5CC95BE61A5B0E1400E78EEC /* Log.swift */,
+				5CC95BE71A5B0E1400E78EEC /* SwiftLog.h */,
 				5CA8C9881A5AF63F0089A692 /* Supporting Files */,
 			);
 			path = SwiftLog;
@@ -113,26 +116,18 @@
 		5CA8C9881A5AF63F0089A692 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5CA8C9891A5AF63F0089A692 /* Info.plist */,
+				5CC95BDD1A5B0D8600E78EEC /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		5CA8C9941A5AF63F0089A692 /* SwiftLogTests */ = {
+		5CC95BDF1A5B0DD400E78EEC /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				5CA8C9971A5AF63F0089A692 /* SwiftLogTests.swift */,
-				5CA8C9951A5AF63F0089A692 /* Supporting Files */,
+				5CC95BE01A5B0DD400E78EEC /* Info.plist */,
+				5CC95BE11A5B0DD400E78EEC /* SwiftLogTests.swift */,
 			);
-			path = SwiftLogTests;
-			sourceTree = "<group>";
-		};
-		5CA8C9951A5AF63F0089A692 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5CA8C9961A5AF63F0089A692 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,7 +137,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CA8C98B1A5AF63F0089A692 /* SwiftLog.h in Headers */,
+				5CC95BEA1A5B0E1400E78EEC /* SwiftLog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,7 +145,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CA8C9F41A5AFE890089A692 /* SwiftLog.h in Headers */,
+				5CC95BEB1A5B0E1400E78EEC /* SwiftLog.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC95BDE1A5B0D8600E78EEC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +280,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC95BE21A5B0DD400E78EEC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CC95BE31A5B0DD400E78EEC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +306,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CA8C9F71A5B07BA0089A692 /* Log.swift in Sources */,
+				5CC95BE81A5B0E1400E78EEC /* Log.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,7 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CA8C9981A5AF63F0089A692 /* SwiftLogTests.swift in Sources */,
+				5CC95BE41A5B0DD400E78EEC /* SwiftLogTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CA8C9F81A5B07E90089A692 /* Log.swift in Sources */,
+				5CC95BE91A5B0E1400E78EEC /* Log.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CA8C9F61A5AFE9B0089A692 /* SwiftLogTests.swift in Sources */,
+				5CC95BE51A5B0DD400E78EEC /* SwiftLogTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,7 +481,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = SwiftLogTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -496,7 +494,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = SwiftLogTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -505,6 +503,7 @@
 		5CA8C9EE1A5AFDEF0089A692 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -522,12 +521,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		5CA8C9EF1A5AFDEF0089A692 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
@@ -557,7 +558,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = SwiftLogTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -574,7 +575,7 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = SwiftLogTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
