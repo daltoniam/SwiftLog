@@ -75,7 +75,7 @@ public class Log {
     ///check the size of a file
     func fileSize(path: String) -> UInt64 {
         let fileManager = NSFileManager.defaultManager()
-        let attrs: NSDictionary? = fileManager.attributesOfFileSystemForPath(path, error: nil)
+        let attrs: NSDictionary? = fileManager.attributesOfItemAtPath(path, error: nil)
         if let dict = attrs {
             return dict.fileSize()
         }
