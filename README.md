@@ -9,6 +9,15 @@ Simple and easy logging in Swift.
 - Rolled logs.
 - Simple concise codebase at just at barely two hundred LOC.
 
+First thing is to import the framework. See the Installation instructions on how to add the framework to your project.
+
+```swift
+//iOS
+import SwiftLog
+//OS X
+import SwiftLogOSX
+```
+
 ## Example
 
 SwiftLog can be used right out of the box with no configuration, simply call the logging function.
@@ -47,9 +56,47 @@ Log.logger.directory = "/Library/somefolder" //default is the standard logging d
 
 ### Cocoapods
 
-```
-Coming soon...(Hopefully!)
-```
+### [CocoaPods](http://cocoapods.org/) 
+At this time, Cocoapods support for Swift frameworks is supported in a [pre-release](http://blog.cocoapods.org/Pod-Authors-Guide-to-CocoaPods-Frameworks/).
+
+To use SwiftLog in your project add the following 'Podfile' to your project
+
+    source 'https://github.com/CocoaPods/Specs.git'
+
+    xcodeproj 'YourProjectName.xcodeproj'
+    platform :ios, '8.0'
+
+    pod 'SwiftLog', :git => "https://github.com/daltoniam/SwiftLog.git", :tag => "0.9.1"
+
+    target 'YourProjectNameTests' do
+        pod 'SwiftLog', :git => "https://github.com/daltoniam/SwiftLog.git", :tag => "0.9.1"
+    end
+
+Then run:
+
+    pod install
+
+#### Updating the Cocoapod
+You can validate SwiftLog.podspec using:
+
+    pod spec lint SwiftLog.podspec
+
+This should be tested with a sample project before releasing it. This can be done by adding the following line to a ```Podfile```:
+    
+    pod 'SwiftLog', :git => 'https://github.com/username/SwiftLog.git'
+
+Then run:
+    
+    pod install
+
+If all goes well you are ready to release. First, create a tag and push:
+
+    git tag 'version'
+    git push --tags
+
+Once the tag is available you can send the library to the Specs repo. For this you'll have to follow the instructions in [Getting Setup with Trunk](http://guides.cocoapods.org/making/getting-setup-with-trunk.html).
+
+    pod trunk push SwiftLog.podspec
 
 ### Carthage
 
