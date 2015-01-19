@@ -101,19 +101,18 @@ public class Log {
     ///get the default log directory
     class func defaultDirectory() -> String {
         var path = ""
+        let fileManager = NSFileManager.defaultManager()
         #if os(iOS)
             let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
             path = "\(paths[0])/Logs"
         #elseif os(OSX)
-            let fileManager = NSFileManager.defaultManager()
             let urls = fileManager.URLsForDirectory(.LibraryDirectory, inDomains: .UserDomainMask)
             if let url = urls.last as? NSURL {
-                if let path = url.path {
-                    path = "\(path)/Logs"
+                if let p = url.path {
+                    path = "\(p)/Logs"
                 }
             }
         #endif
-        let fileManager = NSFileManager.defaultManager()
         if !fileManager.fileExistsAtPath(path) && path != ""  {
             fileManager.createDirectoryAtPath(path, withIntermediateDirectories: false, attributes: nil, error: nil)
         }
