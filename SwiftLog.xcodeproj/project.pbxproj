@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5CA8C9911A5AF63F0089A692 /* SwiftLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA8C9851A5AF63F0089A692 /* SwiftLog.framework */; };
 		5CA8C9E61A5AFDEF0089A692 /* SwiftLogOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA8C9DB1A5AFDEF0089A692 /* SwiftLogOSX.framework */; };
-		5CC95BDE1A5B0D8600E78EEC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC95BDD1A5B0D8600E78EEC /* Info.plist */; };
 		5CC95BE21A5B0DD400E78EEC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC95BE01A5B0DD400E78EEC /* Info.plist */; };
 		5CC95BE31A5B0DD400E78EEC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC95BE01A5B0DD400E78EEC /* Info.plist */; };
 		5CC95BE41A5B0DD400E78EEC /* SwiftLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC95BE11A5B0DD400E78EEC /* SwiftLogTests.swift */; };
@@ -272,7 +271,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CC95BDE1A5B0D8600E78EEC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
