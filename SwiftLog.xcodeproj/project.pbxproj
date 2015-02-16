@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5CA8C9911A5AF63F0089A692 /* SwiftLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA8C9851A5AF63F0089A692 /* SwiftLog.framework */; };
-		5CA8C9E61A5AFDEF0089A692 /* SwiftLogOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA8C9DB1A5AFDEF0089A692 /* SwiftLogOSX.framework */; };
+		5CA8C9E61A5AFDEF0089A692 /* SwiftLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA8C9DB1A5AFDEF0089A692 /* SwiftLog.framework */; };
 		5CC95BE21A5B0DD400E78EEC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC95BE01A5B0DD400E78EEC /* Info.plist */; };
 		5CC95BE31A5B0DD400E78EEC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC95BE01A5B0DD400E78EEC /* Info.plist */; };
 		5CC95BE41A5B0DD400E78EEC /* SwiftLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC95BE11A5B0DD400E78EEC /* SwiftLogTests.swift */; };
@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		5CA8C9851A5AF63F0089A692 /* SwiftLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA8C9901A5AF63F0089A692 /* SwiftLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5CA8C9DB1A5AFDEF0089A692 /* SwiftLogOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftLogOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CA8C9DB1A5AFDEF0089A692 /* SwiftLog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftLog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CA8C9E51A5AFDEF0089A692 /* SwiftLogOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLogOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CC95BDD1A5B0D8600E78EEC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		5CC95BE01A5B0DD400E78EEC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CA8C9E61A5AFDEF0089A692 /* SwiftLogOSX.framework in Frameworks */,
+				5CA8C9E61A5AFDEF0089A692 /* SwiftLog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +96,7 @@
 			children = (
 				5CA8C9851A5AF63F0089A692 /* SwiftLog.framework */,
 				5CA8C9901A5AF63F0089A692 /* SwiftLogTests.xctest */,
-				5CA8C9DB1A5AFDEF0089A692 /* SwiftLogOSX.framework */,
+				5CA8C9DB1A5AFDEF0089A692 /* SwiftLog.framework */,
 				5CA8C9E51A5AFDEF0089A692 /* SwiftLogOSXTests.xctest */,
 			);
 			name = Products;
@@ -202,7 +202,7 @@
 			);
 			name = SwiftLogOSX;
 			productName = SwiftLogOSX;
-			productReference = 5CA8C9DB1A5AFDEF0089A692 /* SwiftLogOSX.framework */;
+			productReference = 5CA8C9DB1A5AFDEF0089A692 /* SwiftLog.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		5CA8C9E41A5AFDEF0089A692 /* SwiftLogOSXTests */ = {
@@ -516,7 +516,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwiftLog;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -538,7 +538,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = SwiftLog;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
