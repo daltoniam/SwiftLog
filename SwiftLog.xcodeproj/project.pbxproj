@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		5CA8C9911A5AF63F0089A692 /* SwiftLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA8C9851A5AF63F0089A692 /* SwiftLog.framework */; };
 		5CA8C9E61A5AFDEF0089A692 /* SwiftLog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CA8C9DB1A5AFDEF0089A692 /* SwiftLog.framework */; };
-		5CC95BE21A5B0DD400E78EEC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC95BE01A5B0DD400E78EEC /* Info.plist */; };
-		5CC95BE31A5B0DD400E78EEC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CC95BE01A5B0DD400E78EEC /* Info.plist */; };
 		5CC95BE41A5B0DD400E78EEC /* SwiftLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC95BE11A5B0DD400E78EEC /* SwiftLogTests.swift */; };
 		5CC95BE51A5B0DD400E78EEC /* SwiftLogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC95BE11A5B0DD400E78EEC /* SwiftLogTests.swift */; };
 		5CC95BE81A5B0E1400E78EEC /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC95BE61A5B0E1400E78EEC /* Log.swift */; };
@@ -229,7 +227,9 @@
 		5CA8C97C1A5AF63F0089A692 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = vluxe;
 				TargetAttributes = {
 					5CA8C9841A5AF63F0089A692 = {
@@ -278,7 +278,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CC95BE21A5B0DD400E78EEC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,7 +292,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5CC95BE31A5B0DD400E78EEC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +367,7 @@
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -445,6 +444,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vluxe.io.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -463,6 +463,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vluxe.io.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -481,6 +482,7 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vluxe.io.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -494,6 +496,7 @@
 				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vluxe.io.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -516,6 +519,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vluxe.io.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftLog;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -538,6 +542,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vluxe.io.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = SwiftLog;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -559,6 +564,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vluxe.io.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
@@ -576,6 +582,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vluxe.io.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 			};
