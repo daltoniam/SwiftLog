@@ -46,7 +46,10 @@ public class Log {
         let path = "\(directory)/\(logName(0))"
         let fileManager = NSFileManager.defaultManager()
         if !fileManager.fileExistsAtPath(path) {
-            "".writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding, error: nil)
+            do {
+                try "".writeToFile(path, atomically: true, encoding: NSUTF8StringEncoding)
+            } catch _ {
+            }
         }
         if let fileHandle = NSFileHandle(forWritingAtPath: path) {
             let dateStr = dateFormatter.stringFromDate(NSDate())
@@ -54,7 +57,7 @@ public class Log {
             fileHandle.seekToEndOfFile()
             fileHandle.writeData(writeText.dataUsingEncoding(NSUTF8StringEncoding)!)
             fileHandle.closeFile()
-            print(writeText)
+            print(writeText, terminator: "")
             cleanup()
         }
     }
@@ -68,14 +71,17 @@ public class Log {
             //delete the oldest file
             let deletePath = "\(directory)/\(logName(maxFileCount))"
             let fileManager = NSFileManager.defaultManager()
-            fileManager.removeItemAtPath(deletePath, error: nil)
+            do {
+                try fileManager.removeItemAtPath(deletePath)
+            } catch _ {
+            }
         }
     }
     
     ///check the size of a file
     func fileSize(path: String) -> UInt64 {
         let fileManager = NSFileManager.defaultManager()
-        let attrs: NSDictionary? = fileManager.attributesOfItemAtPath(path, error: nil)
+        let attrs: NSDictionary? = try? fileManager.attributesOfItemAtPath(path)
         if let dict = attrs {
             return dict.fileSize()
         }
@@ -90,7 +96,10 @@ public class Log {
         if fileManager.fileExistsAtPath(newPath) {
             rename(index+1)
         }
-        fileManager.moveItemAtPath(path, toPath: newPath, error: nil)
+        do {
+            try fileManager.moveItemAtPath(path, toPath: newPath)
+        } catch _ {
+        }
     }
     
     ///gets the log name
@@ -107,14 +116,17 @@ public class Log {
             path = "\(paths[0])/Logs"
         #elseif os(OSX)
             let urls = fileManager.URLsForDirectory(.LibraryDirectory, inDomains: .UserDomainMask)
-            if let url = urls.last as? NSURL {
+            if let url = urls.last {
                 if let p = url.path {
                     path = "\(p)/Logs"
                 }
             }
         #endif
         if !fileManager.fileExistsAtPath(path) && path != ""  {
-            fileManager.createDirectoryAtPath(path, withIntermediateDirectories: false, attributes: nil, error: nil)
+            do {
+                try fileManager.createDirectoryAtPath(path, withIntermediateDirectories: false, attributes: nil)
+            } catch _ {
+            }
         }
         return path
     }

@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 vluxe. All rights reserved.
 //
 
-import UIKit
 import XCTest
 
 class SwiftLogTests: XCTestCase {
