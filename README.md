@@ -52,7 +52,7 @@ Log.logger.directory = "/Library/somefolder" //default is the standard logging d
 
 ## Installation
 
-### Cocoapods
+### CocoaPods
 
 Check out [Get Started](http://cocoapods.org/) tab on [cocoapods.org](http://cocoapods.org/).
 
