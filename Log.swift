@@ -23,13 +23,22 @@ open class Log {
     open var directory = Log.defaultDirectory() {
         didSet {
             #if os(macOS)
-            if directory.hasPrefix("~") {
-                let homeDir = URL(fileURLWithPath: NSHomeDirectory()).path
-                let index = directory.index(after: directory.startIndex)
-                let filePath = directory[...index]
-                directory = "\(homeDir)\(filePath)"
-            }
+                if directory.hasPrefix("~") {
+                    let homeDir = URL(fileURLWithPath: NSHomeDirectory()).path
+                    let index = directory.index(after: directory.startIndex)
+                    let filePath = directory[index...]
+                    directory = "\(homeDir)\(filePath)"
+                }
             #endif
+            
+            let fileManager = FileManager.default
+            if !fileManager.fileExists(atPath: directory) {
+                do {
+                    try fileManager.createDirectory(atPath: directory, withIntermediateDirectories: true, attributes: nil)
+                } catch {
+                    NSLog("Couldn't create directory at \(directory)")
+                }
+            }
         }
     }
     
