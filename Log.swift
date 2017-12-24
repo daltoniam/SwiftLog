@@ -20,7 +20,18 @@ open class Log {
     open var maxFileCount = 4
     
     ///The directory in which the log files will be written
-    open var directory = Log.defaultDirectory()
+    open var directory = Log.defaultDirectory() {
+        didSet {
+            #if os(macOS)
+            if directory.hasPrefix("~") {
+                let homeDir = URL(fileURLWithPath: NSHomeDirectory()).path
+                let index = directory.index(after: directory.startIndex)
+                let filePath = directory[...index]
+                directory = "\(homeDir)\(filePath)"
+            }
+            #endif
+        }
+    }
     
     //The name of the log files.
     open var name = "logfile"
@@ -114,7 +125,7 @@ open class Log {
         #if os(iOS)
             let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
             path = "\(paths[0])/Logs"
-        #elseif os(OSX)
+        #elseif os(macOS)
             let urls = fileManager.urls(for: .libraryDirectory, in: .userDomainMask)
             if let url = urls.last {
                 path = "\(url.path)/Logs"
