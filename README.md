@@ -48,6 +48,9 @@ Log.logger.maxFileCount = 8 //default is 4
 //Set the directory in which the logs files will be written
 Log.logger.directory = "/Library/somefolder" //default is the standard logging directory for each platform.
 
+//Set whether or not writing to the log also prints to the console
+Log.logger.printToConsole = false //default is true
+
 ```
 
 ## Installation
