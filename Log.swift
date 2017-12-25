@@ -45,6 +45,8 @@ open class Log {
     //The name of the log files.
     open var name = "logfile"
     
+    open var printToConsole = true
+    
     ///logging singleton
     open class var logger: Log {
         
@@ -77,7 +79,9 @@ open class Log {
             fileHandle.seekToEndOfFile()
             fileHandle.write(writeText.data(using: String.Encoding.utf8)!)
             fileHandle.closeFile()
-            print(writeText, terminator: "")
+            if printToConsole {
+                print(writeText, terminator: "")
+            }
             cleanup()
         }
     }
