@@ -37,7 +37,7 @@ There are a few configurable options in SwiftLog.
 logw("write to the log!")
 
 //Set the name of the log files
-Log.logger.name = "test" //default is "logwile"
+Log.logger.name = "test" //default is "logfile"
 
 //Set the max size of each log file. Value is in KB
 Log.logger.maxFileSize = 2048 //default is 1024
@@ -47,6 +47,9 @@ Log.logger.maxFileCount = 8 //default is 4
 
 //Set the directory in which the logs files will be written
 Log.logger.directory = "/Library/somefolder" //default is the standard logging directory for each platform.
+
+//Set whether or not writing to the log also prints to the console
+Log.logger.printToConsole = false //default is true
 
 ```
 
