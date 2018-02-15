@@ -24,10 +24,7 @@ open class Log {
         didSet {
             #if os(macOS)
                 if directory.hasPrefix("~") {
-                    let homeDir = URL(fileURLWithPath: NSHomeDirectory()).path
-                    let index = directory.index(after: directory.startIndex)
-                    let filePath = directory[index...]
-                    directory = "\(homeDir)\(filePath)"
+                    directory = NSString(string: directory).expandingTildeInPath
                 }
             #endif
             
