@@ -22,14 +22,7 @@ open class Log {
     ///The directory in which the log files will be written
     open var directory = Log.defaultDirectory() {
         didSet {
-            #if os(macOS)
-                if directory.hasPrefix("~") {
-                    let homeDir = URL(fileURLWithPath: NSHomeDirectory()).path
-                    let index = directory.index(after: directory.startIndex)
-                    let filePath = directory[index...]
-                    directory = "\(homeDir)\(filePath)"
-                }
-            #endif
+            directory = NSString(string: directory).expandingTildeInPath
             
             let fileManager = FileManager.default
             if !fileManager.fileExists(atPath: directory) {
