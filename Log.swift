@@ -130,7 +130,7 @@ open class Log {
         var path = ""
         let fileManager = FileManager.default
         #if os(iOS)
-            let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
+            let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
             path = "\(paths[0])/Logs"
         #elseif os(macOS)
             let urls = fileManager.urls(for: .libraryDirectory, in: .userDomainMask)
