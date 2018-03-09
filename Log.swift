@@ -34,7 +34,11 @@ open class Log {
             }
         }
     }
-    
+
+    open var currentPath: String {
+        return "\(directory)/\(logName(0))"
+    }
+
     ///The name of the log files
     open var name = "logfile"
     
@@ -59,7 +63,7 @@ open class Log {
     
     ///write content to the current log file.
     open func write(_ text: String) {
-        let path = "\(directory)/\(logName(0))"
+        let path = currentPath
         let fileManager = FileManager.default
         if !fileManager.fileExists(atPath: path) {
             do {
