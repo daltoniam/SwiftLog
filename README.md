@@ -12,7 +12,6 @@ Simple and easy logging in Swift.
 First thing is to import the framework. See the Installation instructions on how to add the framework to your project.
 
 ```swift
-//iOS
 import SwiftLog
 ```
 
@@ -100,10 +99,6 @@ Add the `SwiftLog.xcodeproj` to your Xcode project. Once that is complete, in yo
 
 If you are running this in an OSX app or on a physical iOS device you will need to make sure you add the `SwiftLog.framework` included in your app bundle. To do this, in Xcode, navigate to the target configuration window by clicking on the blue project icon, and selecting the application target under the "Targets" heading in the sidebar. In the tab bar at the top of that window, open the "Build Phases" panel. Expand the "Link Binary with Libraries" group, and add `SwiftLog.framework`. Click on the + button at the top left of the panel and select "New Copy Files Phase". Rename this new phase to "Copy Frameworks", set the "Destination" to "Frameworks", and add `SwiftLog.framework`.
 
-## TODOs
-
-- [ ] Complete Docs
-- [ ] Add Unit Tests
 
 ## License
 
