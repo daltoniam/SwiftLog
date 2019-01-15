@@ -50,6 +50,8 @@ Log.logger.directory = "/Library/somefolder" //default is the standard logging d
 //Set whether or not writing to the log also prints to the console
 Log.logger.printToConsole = false //default is true
 
+//Configure date formatter
+Log.logger.dateFormatter.dateFormat = "y-MM-dd H:m:ss.SSSS"
 ```
 
 ## Installation
