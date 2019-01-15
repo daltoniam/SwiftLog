@@ -51,7 +51,7 @@ Log.logger.directory = "/Library/somefolder" //default is the standard logging d
 Log.logger.printToConsole = false //default is true
 
 //Configure date formatter
-Log.logger.dateFormatter.timeStyle = .full
+Log.logger.dateFormatter.dateFormat = "y-MM-dd H:m:ss.SSSS"
 ```
 
 ## Installation
